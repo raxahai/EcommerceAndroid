@@ -1,5 +1,9 @@
 package com.example.ecommerceairlift.Adapters;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
+import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,8 +15,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.ecommerceairlift.DetailedProductActivity;
 import com.example.ecommerceairlift.R;
 import com.example.ecommerceairlift.models.Product;
+import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -37,7 +43,14 @@ public class CustomProductAdapter extends RecyclerView.Adapter<CustomProductAdap
         Picasso.get().load(dataSet.get(position).getImage()).into(holder.getImageView());
         holder.getProductAmountView().setText("$"+Float.toString(dataSet.get(position).getPrice()));
         holder.getRatingBarView().setRating(dataSet.get(position).getRating().getRate());
-
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), DetailedProductActivity.class);
+                intent.putExtra("Product",dataSet.get(holder.getAdapterPosition()));
+                view.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -47,6 +60,7 @@ public class CustomProductAdapter extends RecyclerView.Adapter<CustomProductAdap
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
+        private final Context context;
         private final TextView textView;
         private final ImageView imageView;
         private final TextView productAmount;
@@ -55,6 +69,7 @@ public class CustomProductAdapter extends RecyclerView.Adapter<CustomProductAdap
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            context = itemView.getContext();
             textView = itemView.findViewById(R.id.productName);
             imageView = itemView.findViewById(R.id.imageView);
             productAmount = itemView.findViewById(R.id.productAmount);
@@ -72,5 +87,6 @@ public class CustomProductAdapter extends RecyclerView.Adapter<CustomProductAdap
         public RatingBar getRatingBarView(){
             return productRatingBar;
         }
+
     }
 }
