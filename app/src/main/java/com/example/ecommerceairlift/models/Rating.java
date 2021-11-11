@@ -3,7 +3,9 @@ package com.example.ecommerceairlift.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Rating {
+import java.io.Serializable;
+
+public class Rating implements Serializable {
     @SerializedName("rate")
     @Expose
     private float rate;
