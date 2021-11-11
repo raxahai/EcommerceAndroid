@@ -11,4 +11,6 @@
     <color name="transparent">#00000000</color>
     <color name="maroon">#FF770000</color>
     <color name="golden">#FFFFD700</color>
+    <color name="red">#FFFF0000</color>
+    <color name="light_red">#FFFF7F7F</color>
 </resources>
