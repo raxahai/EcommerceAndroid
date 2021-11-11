@@ -36,6 +36,9 @@
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:text="TextView"
+                android:layout_marginEnd="10dp"
+                android:lines="1"
+                android:ems="3"
                 android:textStyle="bold"
                 android:textSize="18sp" />
             <RatingBar
