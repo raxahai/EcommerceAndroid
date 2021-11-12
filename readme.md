@@ -21,4 +21,4 @@
     <li>Linear layout</li>
 </ul>
 
-<p>Cart in progress</p>
+<p>Cart in progress...</p>
