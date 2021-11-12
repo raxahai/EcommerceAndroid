@@ -1,1 +1,16 @@
-Ecommerce Application - Android
+<h1>Ecommerce Application - Android</h1>
+
+<h5>Requirements:</h5>
+<ol>
+    <li>jdk-11.0.11</li>
+    <li>gradle-7.0.2</li>
+    <li>retrofit2:converter-gson:2.9.0</li>
+    <li>picasso-(latest-version)</li>
+    <li>retrofit-2.9.0</li>
+</ol>
+
+<h5>Launching activity:</h5>
+<ul>
+    <li>First-Activity: List of products</li>
+    <li>Second-Activity: Produc detailed view</li>
+</ul>
