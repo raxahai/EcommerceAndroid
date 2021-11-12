@@ -21,4 +21,10 @@
     <li>Linear layout</li>
 </ul>
 
+<h5>API used:</h5>
+<ul>
+    <li>https://fakestoreapi.com/</li>
+    <li>Fetched Products</li>
+</ul>
+
 <p>Cart in progress...</p>
