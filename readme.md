@@ -9,8 +9,16 @@
     <li>retrofit-2.9.0</li>
 </ol>
 
-<h5>Launching activity:</h5>
+<h5>On launch application:</h5>
 <ul>
     <li>First-Activity: List of products</li>
-    <li>Second-Activity: Produc detailed view</li>
+    <li>Second-Activity: Product detailed view</li>
 </ul>
+
+<h5>Layout implemented</h5>
+<ul>
+    <li>Constraint layout</li>
+    <li>Linear layout</li>
+</ul>
+
+<p>Cart in progress</p>
