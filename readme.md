@@ -31,7 +31,7 @@
 
 <table>
     <tr>
-        <td><img src= "images/Screenshot_1637054417.png" width=270 height=480></td>
-        <td><img src= "images/Screenshot_1637054423.png" width=270 height=480></td>
+        <td><img src= "images/Screenshot_1637054417.png" width=280 height=520></td>
+        <td><img src= "images/Screenshot_1637054423.png" width=280 height=520></td>
     </tr>
 </table>
