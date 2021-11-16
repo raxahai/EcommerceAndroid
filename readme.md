@@ -28,3 +28,10 @@
 </ul>
 
 <p>Cart in progress...</p>
+
+<table>
+    <tr>
+        <td><img src= "images/Screenshot_1637054417" width=270 height=480></td>
+        <td><img src= "images/Screenshot_1637054423" width=270 height=480></td>
+    </tr>
+</table>
