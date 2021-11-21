@@ -8,100 +8,103 @@
 
     <ImageView
         android:id="@+id/productImage"
-        android:layout_width="409dp"
-        android:layout_height="400dp"
-        android:adjustViewBounds="true"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="false"
         android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/productTitle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/productTitle"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="10dp"
         android:ems="1"
         android:text="@string/text"
         android:textSize="22sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/ratingBarDetailedActivity"
+        app:autoSizeMaxTextSize="24sp"
+        app:autoSizeMinTextSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/ratingBarDetailedActivity"
+        app:layout_constraintEnd_toStartOf="@+id/productPrice"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/productImage" />
+
+    <TextView
+        android:id="@+id/productPrice"
+        android:layout_width="80dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center|top"
+        android:text="@string/text"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ratingBarDetailedActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/productTitle"
+        app:layout_constraintTop_toBottomOf="@+id/productImage" />
+
+    <RatingBar
+        android:id="@+id/ratingBarDetailedActivity"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:progressTint="@color/golden"
+        app:layout_constraintBottom_toTopOf="@+id/productsRemaining"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productTitle" />
 
     <TextView
         android:id="@+id/productsRemaining"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginBottom="10dp"
         android:text="@string/text"
         android:textStyle="italic"
-        app:layout_constraintStart_toStartOf="@+id/productDescription"
+        app:layout_constraintBottom_toTopOf="@+id/productDescription"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ratingBarDetailedActivity" />
-
-    <RatingBar
-        android:id="@+id/ratingBarDetailedActivity"
-        style="@style/RatingBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:isIndicator="true"
-        android:numStars="5"
-        android:progressTint="@color/golden"
-        app:layout_constraintStart_toStartOf="@+id/productsRemaining"
-        app:layout_constraintTop_toBottomOf="@+id/productTitle" />
 
     <TextView
         android:id="@+id/productDescription"
         android:layout_width="match_parent"
-        android:layout_height="85dp"
+        android:layout_height="80dp"
         android:layout_marginHorizontal="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="18dp"
         android:text="@string/text"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayoutProductDetailed"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/productsRemaining" />
 
-    <LinearLayout
-        android:id="@+id/linearLayoutProductDetailed"
-        android:layout_width="match_parent"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="20dp"
-        android:orientation="horizontal"
-        android:paddingVertical="8dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="18dp"
+        android:paddingVertical="12dp"
+        android:text="@string/addToCart"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:typeface="monospace"
+        app:cornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <TextView
-            android:id="@+id/productPrice"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginVertical="6dp"
-            android:layout_weight="1"
-            android:background="@drawable/border"
-            android:gravity="center"
-            android:text="@string/text"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <Space
-            android:layout_width="34dp"
-            android:layout_height="match_parent" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:paddingVertical="12dp"
-            android:text="@string/addToCart"
-            android:textAllCaps="false"
-            android:textSize="16sp"
-            android:typeface="monospace"
-            app:cornerRadius="8dp" />
-    </LinearLayout>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
